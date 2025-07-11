@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Отзыв</title>
+<!--    {{ form.csrf_token }}-->
+</head>
+<body>
+    <div class="write-review">
+        <form class="review-form" method="post">
+            {{ form.csrf_token }}
+            <div class="impontant">
+                <div class="input-container">
+                    <label for="#place_name">Название места</label>
+                    <!--                        <input type="place_name" class="input_data" id="place_name">-->
+                    {{ form.place_name }}
+                </div>
+                <div class="input-container">
+                    <label for="#place_adress">Адрес места</label>
+                    <!--                        <input type="place_adress" class="input_data" id="place_adress">-->
+                    {{ form.address }}
+                </div>
+            </div>
+            <br>
+            <div class="input-container">
+                <label for="place_description">описание места</label>
+                <!--                    <input type="about" class="input_data" id="place_description">-->
+                {{ form.about }}
+            </div>
+            <br>
+
+            {{ form.grade }}
+            <br>
+            <!--                <button type="submit" class="send-review-button">Отправить</button>-->
+            {{ form.submit }}
+        </form>
+        <!-- <label for="Название заведения"></label> -->
+    </div>
+</body>
+</html>
