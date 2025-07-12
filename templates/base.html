@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/' + file_css) }}">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="nav-menu">
+                <li class="menu-link"><a href="#places">Интересные места</a></li>
+                <li class="menu-link"><a href="#last-review">Отзывы заведений</a></li>
+                <li class="menu-link"><a href="/review">Написать отзыв</a></li>
+            </ul>
+        </nav>
+    </header>
+    {% block content %}{% endblock %}
+    <footer>Something</footer>
+</body>
+</html>

@@ -1,26 +1,12 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../static/css/index.css">
-    <title>Сириус.Путеводитель</title>
-</head>
-<body>
-    <header>
-        <nav class="navbar">
-            <ul class="nav-menu">
-                <li class="menu-link"><a href="#">Интересные места</a></li>
-                <li class="menu-link"><a href="#">Отзывы заведений</a></li>
-                <li class="menu-link"><a href="#">Написать отзыв</a></li>
-            </ul>
-        </nav>
-    </header>
+{% extends "base.html"%}
+
+{% block content %}
     <main>
         <div class="start-title">
             <h1 class="hello">Добро пожаловать на сайт Сириус.Путеводитель</h1>
             <h3 class="our-aim">наша цель Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore maxime ex doloribus placeat in vitae repellat beatae numquam voluptates! Corporis consequatur ad repudiandae non accusantium laborum recusandae voluptate suscipit fugit.</h3>
         </div>
-        <div class="interesting-places">
+        <div class="interesting-places" id="places">
             <article class="place">
                 <img src="../static/images/filler.jpg" alt="Заведение">
                 <h3 class="place-name">name</h3>
@@ -50,7 +36,7 @@
                 <h3 class="place-name">name</h3>
                 <p class="description">description</p>
                 <div class="tags">
-                    <div class="tag">кафе</p></div>
+                    <div class="tag">кафе</div>
                     <div class="review bad">
                         <p>2.0</p>
                         <img src="../static/icons/star.png" alt="star"></img>
@@ -78,6 +64,4 @@
         </div> -->
 
     </main>
-    <footer>Something</footer>
-</body>
-</html>
+{% endblock %}

@@ -1,40 +1,41 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Отзыв</title>
-<!--    {{ form.csrf_token }}-->
-</head>
-<body>
+{% extends "base.html"%}
+
+{% block content %}
     <div class="write-review">
-        <form class="review-form" method="post">
+        <form class="review-form" method="post" enctype="multipart/form-data">
             {{ form.csrf_token }}
             <div class="impontant">
                 <div class="input-container">
-                    <label for="#place_name">Название места</label>
-                    <!--                        <input type="place_name" class="input_data" id="place_name">-->
-                    {{ form.place_name }}
+                    <label for="place_name">Название места</label>
+                    {{ form.place_name(id="place_name") }}
                 </div>
                 <div class="input-container">
-                    <label for="#place_adress">Адрес места</label>
-                    <!--                        <input type="place_adress" class="input_data" id="place_adress">-->
-                    {{ form.address }}
+                    <label for="place_address">Адрес места</label>
+                    {{ form.address(id="place_address") }}
                 </div>
             </div>
             <br>
-            <div class="input-container">
+            <div class="general">
                 <label for="place_description">описание места</label>
-                <!--                    <input type="about" class="input_data" id="place_description">-->
-                {{ form.about }}
+                {{ form.about(id="place_description") }}
             </div>
             <br>
-
-            {{ form.grade }}
+            <div class="impontant">    
+                <div class="input-container">
+                    <label for="grade">Ваша оценка</label>
+                    {{ form.grade(id="grade") }}
+                </div>
+                <div class="input-container">
+                    <label for="type_of_place">Чем является это место</label>
+                    {{ form.type_of_place(id="type_of_place") }}
+                </div>
+                <div class="input-container">
+                    <label for="photo">Приложите фото</label>
+                    {{ form.photo(id="photo") }}
+                </div>
+            </div>
             <br>
-            <!--                <button type="submit" class="send-review-button">Отправить</button>-->
-            {{ form.submit }}
+            {{ form.submit(class="send-review-button") }}
         </form>
-        <!-- <label for="Название заведения"></label> -->
     </div>
-</body>
-</html>
+{% endblock %}

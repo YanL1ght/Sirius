@@ -9,9 +9,9 @@ app.config['SECRET_KEY'] = 'Сверхсекретный ключ, которы�
 csrf.init_app(app)
 
 
-@app.route('/', methods=["POST", 'GET'])
+@app.route('/')
 def index():
-    return render_template("index.html")
+    return render_template("index.html", title='review', file_css='index.css')
 
 
 if __name__ == "__main__":
