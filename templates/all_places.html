@@ -2,6 +2,11 @@
 
 {% block content %}
 <main>
+    <form method="post" class="filter">
+        {{ form.csrf_token }}
+        {{ form.select(id="#filter_list") }}
+        {{ form.submit }}
+    </form>
     <div class="interesting-places" id="places">
             {% for place in places %}
                 <article class="place">
@@ -29,4 +34,10 @@
             {% endfor %}
     </div>
 </main>
+
+<footer>
+    <a href="/review">
+        <button>Не нашли то, что искали? Так довавьте!</button>
+    </a>
+</footer>
 {% endblock %}
