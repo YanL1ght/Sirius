@@ -13,13 +13,9 @@ params = {
 }
 
 
-@blueprint.route('/images/<path:filename>')
-def images(filename):
-    return send_from_directory('db/upload_images', filename)
-
 
 @blueprint.route('/place/<int:place_id>', methods=['GET', "POST"])
-def index(place_id):
+def place_page(place_id):
     session = create_session()
     place = session.query(Place).filter(Place.id == place_id).first()
     if not place:

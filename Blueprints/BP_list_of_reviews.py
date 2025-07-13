@@ -13,13 +13,8 @@ params = {
 }
 
 
-@blueprint.route('/images/<path:filename>')
-def images(filename):
-    return send_from_directory('db/upload_images', filename)
-
-
 @blueprint.route('/list_of_reviews')
-def index():
+def list_of_reviews():
     session = create_session()
     params['reviews'] = session.query(CrateReviews).all()
 

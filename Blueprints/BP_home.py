@@ -19,5 +19,5 @@ def images(filename):
 @blueprint_home.route('/')
 def index():
     session = create_session()
-    params['places'] = session.query(Place).all()[:3]
+    params['places'] = session.query(Place).all()[:6]
     return render_template("index.html", **params)
