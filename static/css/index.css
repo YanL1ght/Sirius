@@ -57,7 +57,14 @@ main {
     border-radius: 5%;
     /* border: 2px outset black; */
     padding: 0;
+    vertical-align: middle;
     background-color: rgb(128, 0, 126);
+    box-shadow: 3px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.place-link {
+    color: white;
+    text-decoration: none;
 }
 
 .place img {

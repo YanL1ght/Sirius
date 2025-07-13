@@ -1,0 +1,79 @@
+body {
+    background-color: rgb(59, 60, 230);
+    margin: 0;
+}
+
+/* ------------------------ форма для отзыва --------------------------- */
+
+.write-review {
+    width: 80%;
+    
+    margin: 100px auto;
+    padding: 0;
+}
+
+.review-form {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.input-container {
+    display: inline-flex;
+    width: 49%;
+    flex-direction: column;
+}
+
+#place_name {
+    width: 100%;
+    margin: 0 auto;
+    padding: 3px;
+}
+
+#place_address {
+    padding: 3px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+textarea {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 50px;
+    max-height: 50vh;
+}
+
+.impontant {
+    display: flex;
+    justify-content: space-between;
+}
+
+.send-review-button {
+    height: 40px;
+    width: 30%;
+    margin: 0 auto;
+}
+
+.general {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#grade {
+    text-align: center;
+    width: 90px;
+}
+
+
+@media (max-width: 580px) {
+    .input-container {
+        margin-top: 10px;
+        width: 100%;
+    }
+    .impontant {
+        flex-direction: column;
+    }
+}

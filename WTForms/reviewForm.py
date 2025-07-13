@@ -3,6 +3,10 @@ from wtforms import StringField, validators, SubmitField, FileField, TextAreaFie
 from flask_wtf.file import FileRequired
 from wtforms.validators import ValidationError
 
+types_of_place = ["Парк", "спортивный комплекс", "стадион", "ледовая арена", "развлекательный парк", "отель",
+                  "ресторан", "кафе", "магазин", "рынок", "библиотека", "музей", "выставочный центр",
+                  "образовательное учреждение", "медицинский центр", "пляж", "детская секция", "спортивная секция"]
+
 
 def validate_photo(form, field):
     allowed_extensions = {'png', 'jpg', 'jpeg'}
@@ -20,7 +24,15 @@ class ReviewForm(FlaskForm):
                         choices=[(5, 'Отлично'), (4, "Хорошо"), (3, "Сойдёт"), (2, "Плохо"), (1, "Ужасно")],
                         coerce=int)
     type_of_place = SelectField("Тип места",
-                                choices=["кафе"],
+                                choices=types_of_place,
                                 coerce=str)
     # recaptcha =
-    submit = SubmitField('Send')
+    submit = SubmitField('Отправить')
+
+
+class SecondReviewForm(FlaskForm):
+    about = TextAreaField('About', [validators.DataRequired()])
+    grade = SelectField('Ваша оценка',
+                        choices=[(5, 'Отлично'), (4, "Хорошо"), (3, "Сойдёт"), (2, "Плохо"), (1, "Ужасно")],
+                        coerce=int)
+    submit = SubmitField('Отправить')

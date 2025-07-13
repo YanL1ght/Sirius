@@ -1,5 +1,5 @@
-from flask import Flask, render_template
-from BP_review import blueprint
+from flask import Flask
+from Blueprints import BP_review, BP_home, BP_place, BP_list_of_reviews
 from flask_wtf.csrf import CSRFProtect
 from db_models.db_session import global_init
 
@@ -9,12 +9,10 @@ app.config['SECRET_KEY'] = 'Сверхсекретный ключ, которы�
 csrf.init_app(app)
 
 
-@app.route('/')
-def index():
-    return render_template("index.html", title='review', file_css='index.css')
-
-
 if __name__ == "__main__":
     global_init('db/database.sqlite')
-    app.register_blueprint(blueprint)
+    app.register_blueprint(BP_review.blueprint_review)
+    app.register_blueprint(BP_home.blueprint_home)
+    app.register_blueprint(BP_place.blueprint)
+    app.register_blueprint(BP_list_of_reviews.blueprint)
     app.run(debug=True)

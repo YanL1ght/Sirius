@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<main>
+        <div class="place-card">
+            <img src="{{ url_for('home.images', filename=place.image_filename) }}" alt="{{ place.name }}" class="place-image">
+            <div class="place-text">
+                <h2 class="place-name">{{ place.name }}</h2>
+                <h4 class="place-address">Адрес: {{ place.address }}</h4>
+                <div class="tag">{{ place.type_of_place }}</div>
+                <p class="description">
+                    {{ place.about }}
+                </p>
+                {% set color = 'good' %}
+                {% if place.grade <= 2 %}
+                    {% set color = 'bad' %}
+                {% endif %}
+                <div class="review {{ color }}">
+                    <p>{{ place.grade }}</p>
+                    <img src="../static/icons/star.png" alt="star">
+                </div>
+            </div>
+        </div>
+        <div class="place-reviews">
+            <h3>Хотите написать отзыв? Напишите его тут</h3>
+            <form class="review-form" method="post" enctype="multipart/form-data">
+                {{ form.csrf_token }}
+                <div class="write-review">
+                    <div class="new_grade new_review_field">
+                        <label for="grade">Ваша оценка</label>
+                        {{ form.grade(id="grade") }}
+                    </div>
+                    <div class="new_about new_review_field">
+                        <label for="place_description">Описание места</label>
+                        {{ form.about(id="place_description") }}
+                    </div>
+                    {{ form.submit(id="submit") }}
+                </div>
+            </form>
+            <div class="users-reviews">
+                {% for review in reviews %}
+                    <div class="user-review">
+                        {% set color = 'good' %}
+                        {% if review.grade <= 2 %}
+                            {% set color = 'bad' %}
+                        {% endif %}
+                        <div class="user-grade {{ color }}">
+                            <p>{{ review.grade }}</p>
+                            <img src="../static/icons/star.png" alt="star">
+                        </div>
+
+                        <div class="user-review-text">
+                            <p class="date">{{ dates[loop.index0] }}</p>
+                            <p class="user-description">
+                                {{ review.about }}
+                            </p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </main>
+{% endblock %}
