@@ -25,9 +25,7 @@ class SomeForm(FlaskForm):
 @blueprint.route('/all_places', methods=['GET', 'POST'])
 def all_places():
     form = SomeForm()
-    print(form.validate_on_submit())
     if form.validate_on_submit():
-        print(form.select.data)
         return redirect(f'/all_places?filter={form.select.data}')
     session = create_session()
     _filter = request.args.get('filter')
@@ -35,5 +33,4 @@ def all_places():
         params['places'] = session.query(Place).all()
     else:
         params['places'] = session.query(Place).filter(Place.type_of_place == _filter).all()
-    print(params["types_of_place"])
     return render_template("all_places.html", form=form, **params)

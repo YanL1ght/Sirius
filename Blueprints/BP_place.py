@@ -13,7 +13,6 @@ params = {
 }
 
 
-
 @blueprint.route('/place/<int:place_id>', methods=['GET', "POST"])
 def place_page(place_id):
     session = create_session()
