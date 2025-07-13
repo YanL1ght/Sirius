@@ -3,16 +3,17 @@ from db_models.db_session import create_session
 from db_models.db_places import Place
 from flask import request
 from flask_wtf import FlaskForm
-from wtforms import StringField, validators, SubmitField, FileField, TextAreaField, SelectField
+from wtforms import SubmitField, SelectField
 
 blueprint = Blueprint('all_places', __name__, template_folder='templates')
 
 params = {
     "title": 'Все отзывы',
     "file_css": 'index.css',
-    "types_of_place": ['Все', "Парк", "спортивный комплекс", "стадион", "ледовая арена", "развлекательный парк", "отель",
-                       "ресторан", "кафе", "магазин", "рынок", "библиотека", "музей", "выставочный центр",
-                       "образовательное учреждение", "медицинский центр", "пляж", "детская секция", "спортивная секция"]
+    "types_of_place": ['Все', 'Парк', 'Спортивный комплекс', 'Стадион', 'Ледовая арена', 'Развлекательный парк',
+                       "Торговый центр",
+                       'Отель', 'Ресторан', 'Кафе', 'Магазин', 'Рынок', 'Библиотека', 'Музей', 'Выставочный центр',
+                       'Образовательное учреждение', 'Медицинский центр', 'Пляж', 'Детская секция', 'Спортивная секция']
 }
 
 

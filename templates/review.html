@@ -7,29 +7,29 @@
             <div class="impontant">
                 <div class="input-container">
                     <label for="place_name">Название места</label>
-                    {{ form.place_name(id="place_name") }}
+                    {{ form.place_name(id="place_name", class="be_nice") }}
                 </div>
                 <div class="input-container">
                     <label for="place_address">Адрес места</label>
-                    {{ form.address(id="place_address") }}
+                    {{ form.address(id="place_address", class="be_nice") }}
                 </div>
             </div>
             <br>
             <div class="general">
                 <label for="place_description">описание места</label>
-                {{ form.about(id="place_description") }}
+                {{ form.about(id="place_description", class="be_nice") }}
             </div>
             <br>
             <div class="impontant">    
-                <div class="input-container">
-                    <label for="grade">Ваша оценка</label>
-                    {{ form.grade(id="grade") }}
-                </div>
-                <div class="input-container">
+                <div class="select-container">
                     <label for="type_of_place">Чем является это место</label>
                     {{ form.type_of_place(id="type_of_place") }}
                 </div>
-                <div class="input-container">
+                <div class="select-container">
+                    <label for="grade">Ваша оценка</label>
+                    {{ form.grade(id="grade") }}
+                </div>
+                <div class="select-container">
                     <label for="photo">Приложите фото</label>
                     {{ form.photo(id="photo") }}
                 </div>

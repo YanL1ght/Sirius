@@ -15,6 +15,11 @@ main {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    color: white;
+    border: 0;
+    border-radius: 1rem;
+    background-color: rgb(128, 0, 126);
+    box-shadow: 3px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
 .place-image {
@@ -46,6 +51,10 @@ main {
 
 .place-address {
     margin: 4px;
+}
+
+.description {
+    font-size: 1.1rem;
 }
 
 .review {
@@ -156,8 +165,15 @@ h3 {
 }
 
 #grade {
-    width: 100%;
-    height: auto;
+    color: white;
+    padding: auto 10px;
+    border: 0;
+    border-radius: 5px;
+    background-color: rgb(128, 0, 116);
+    transition: .1s ease;
+    box-shadow: 3px 1px 5px rgba(0, 0, 0, 0.5);
+
+    height: 25px;
 }
 
 .new_about {    
@@ -167,12 +183,27 @@ h3 {
 }
 
 #place_description {
+    color: white;
+    padding: auto 10px;
+    border: 0;
+    border-radius: 5px;
+    background-color: rgb(128, 0, 116);
+    transition: .1s ease;
+    box-shadow: 3px 1px 5px rgba(0, 0, 0, 0.5);
     max-width: 100%;
     min-width: 100%;
+    min-height: 50px;
     max-height: 100px;
 }
 
 #submit {
+    color: white;
+    padding: auto 10px;
+    border: 0;
+    border-radius: 5px;
+    background-color: rgb(128, 0, 116);
+    transition: .1s ease;
+    box-shadow: 3px 1px 5px rgba(0, 0, 0, 0.5);
     margin-top: 18px;
     height: 30px;
     width: 100px;
@@ -186,7 +217,8 @@ h3 {
         width: 100%;
     }
     .place-text {
-        width: 100%;
+        width: 90%;
+        margin: 7px auto;
     }
     .write-review {
         width: 90%;

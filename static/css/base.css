@@ -30,6 +30,7 @@ header {
 
 .menu-link {
     height: fit-content;
+    transition: all .2s ease;
 }
 
 .menu-link a {
@@ -37,6 +38,11 @@ header {
     text-decoration: none;
     font-size: large;
     margin: 0;
+}
+
+.menu-link:hover {
+    margin-top: -2px;
+    margin-bottom: 2px;
 }
 
 /* ----------------- footer -------------------------- */

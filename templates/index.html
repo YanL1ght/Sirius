@@ -4,9 +4,10 @@
     <main>
         <div class="start-title">
             <h1 class="hello">Добро пожаловать на сайт Сириус.Путеводитель</h1>
-            <h3 class="our-aim">наша цель Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore maxime ex doloribus placeat in vitae repellat beatae numquam voluptates! Corporis consequatur ad repudiandae non accusantium laborum recusandae voluptate suscipit fugit.</h3>
+            <h3 class="our-aim">Этот сайт создан для того, чтобы вам было быстро и удобно узнать о местных заведениях или других мест. Нажмите на интересующие вас пункты сверху, чтобы начать пользоваться сайтом</h3>
         </div>
         <div class="interesting-places" id="places">
+            <h2>Интересные места</h2>
             {% for place in places %}
                 <article class="place">
                    <a href="/place/{{ place.id }}" class="place-link">

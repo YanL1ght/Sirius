@@ -58,4 +58,4 @@ def review():
         session.commit()
 
         return render_template('alert.html')
-    return render_template('review.html', form=form, title='review', file_css='review.css')
+    return render_template('review.html', form=form, title='Новое место', file_css='review.css')

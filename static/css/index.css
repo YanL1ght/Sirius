@@ -34,10 +34,19 @@ main {
 }
 
 .our-aim {
-    font-size: large;
+    font-size: 1.5rem;
+    text-align: center;
 }
 
 /* ------------------ места интереса -------------------- */
+
+.interesting-places h2 {
+    color: black;
+    font-family: Cambria;
+    width: 100%;
+    text-align: center;
+    font-size: 1.8rem;
+}
 
 .interesting-places {
     position: relative;
@@ -79,6 +88,7 @@ main {
 .place-name {
     position: relative;
     left: 5px;
+    height: 75px;
     width: 80%;
     margin: 3px auto;
     font-size: 1.3rem;
@@ -87,6 +97,7 @@ main {
 .description {
     position: relative;
     width: 80%;
+    height: 57px;
     margin: 0 auto;
 }
 
@@ -172,7 +183,30 @@ main {
 
 .filter {
     width: 300px;
+    height: 40px;
     margin: 20px auto;
+}
+
+#filter_list {
+    height: 100%;
+    color: white;
+    padding: auto 10px;
+    border: 0;
+    border-radius: 5px;
+    background-color: rgb(128, 0, 116);
+    transition: .1s ease;
+    box-shadow: 3px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+#reload_filters {
+    height: 100%;
+    color: white;
+    padding: auto 10px;
+    border: 0;
+    border-radius: 5px;
+    background-color: rgb(128, 0, 116);
+    transition: .1s ease;
+    box-shadow: 3px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
 /* ----------------------------- footer ----------------------- */

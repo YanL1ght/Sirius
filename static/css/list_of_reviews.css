@@ -27,13 +27,13 @@ main {
     padding: 5px;
     vertical-align: middle;
     background-color: rgb(128, 0, 126);
+    transition: .1s ease;
     box-shadow: 3px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* .review:hover {
-    position: relative;
-    margin-top: -5px;
-} */
+.review:hover {
+    scale: 1.01;
+}
 
 .all-reviews a {
     text-decoration: none;
@@ -49,7 +49,7 @@ main {
     height: 30px;
     padding: 1px 10px;
     width: 75px;
-    border-radius: 15%;
+    border-radius: 1rem;
 }
 
 .review_data p {
