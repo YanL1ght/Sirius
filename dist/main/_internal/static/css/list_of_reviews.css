@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.all-reviews {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 auto;
+    margin-top: 3vw;
+    color:aliceblue;
+    font-family: Cambria;
+}
+
+.review {
+    display: inline-block;
+    width: 30%;
+    margin: 1%;
+    min-height: 325px;
+    border-radius: 5%;
+    padding: 5px;
+    vertical-align: middle;
+    background-color: rgb(128, 0, 126);
+    transition: .1s ease;
+    box-shadow: 3px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.review:hover {
+    scale: 1.01;
+}
+
+.all-reviews a {
+    text-decoration: none;
+    color: white;
+}
+
+.review_data {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    height: 30px;
+    padding: 1px 10px;
+    width: 75px;
+    border-radius: 1rem;
+}
+
+.review_data p {
+    margin: 0;
+    padding: 0;
+}
+
+.review_data img {
+    aspect-ratio: 1/1;
+    scale: 0.4;
+    margin: 0;
+    padding: 0;
+    right: 0;
+}
+
+.bad {
+    background-color: red;
+}
+
+.good {
+    background-color: green;
+}
+
+
+@media (max-width: 1031px) {
+    .review {
+        width: 46%;
+    }
+}
+@media (max-width: 645px) {
+    .review {
+        width: 98%;
+        margin: 10px auto;
+        min-height: 220px;
+    }
+}

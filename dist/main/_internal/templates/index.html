@@ -1,0 +1,44 @@
+{% extends "base.html"%}
+
+{% block content %}
+    <main>
+        <div class="start-title">
+            <h1 class="hello">Добро пожаловать на сайт Сириус.Путеводитель</h1>
+            <h3 class="our-aim">Этот сайт создан для того, чтобы вам было быстро и удобно узнать о местных заведениях или других мест. Нажмите на интересующие вас пункты сверху, чтобы начать пользоваться сайтом</h3>
+        </div>
+        <div class="interesting-places" id="places">
+            <h2>Интересные места</h2>
+            {% for place in places %}
+                <article class="place">
+                   <a href="/place/{{ place.id }}" class="place-link">
+                        <img src="{{ url_for('home.images', filename=place.image_filename) }}" alt="{{ place.name }}">
+                        <h3 class="place-name">{{ place.name }}</h3>
+                        {% if place.about|length > 100 %}
+                        <p class="description">{{ place.about[:100] }}...</p>
+                        {% else %}
+                        <p class="description">{{ place.about }}</p>
+                        {% endif %}
+                        <div class="tags">
+                            <div class="tag">{{ place.type_of_place }}</div>
+                            {% set color = 'good' %}
+                            {% if place.grade <= 2 %}
+                                {% set color = 'bad' %}
+                            {% endif %}
+                            <div class="review {{ color }}">
+                                <p>{{ place.grade }}</p>
+                                <img src="../static/icons/star.png" alt="star">
+                            </div>
+                        </div>
+                   </a>
+                </article>
+            {% endfor %}
+        </div>
+        <div class="see-more">
+            <a href="/all_places">
+                <button class="redirect-button">
+                    Увидеть больше 
+                </button>
+            </a>
+        </div>
+    </main>
+{% endblock %}

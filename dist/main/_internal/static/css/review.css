@@ -1,0 +1,133 @@
+body {
+    background-color: rgb(59, 60, 230);
+    margin: 0;
+}
+
+/* ------------------------ форма для отзыва --------------------------- */
+
+.write-review {
+    width: 80%;
+    
+    margin: 100px auto;
+    padding: 0;
+}
+
+.review-form {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.input-container {
+    display: inline-flex;
+    width: 49%;
+    flex-direction: column;
+}
+
+.be_nice {
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #bdbdbd;
+    border-radius: 0.25rem;
+}
+
+#place_name {
+    width: 100%;
+    margin: 0 auto;
+    padding: 3px;
+}
+
+#place_address {
+    padding: 3px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+textarea {
+    min-width: calc(100% - 1.5rem);
+    max-width: calc(100% - 1.5rem);
+    min-height: 25vh;
+    max-height: 25vh;
+}
+
+.impontant {
+    display: flex;
+    justify-content: space-between;
+}
+
+.impontant select {
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #bdbdbd;
+    border-radius: 0.25rem;
+}
+
+#photo {
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #bdbdbd;
+    border-radius: 0.25rem;
+}
+
+.send-review-button {
+    height: 40px;
+    width: 30%;
+    margin: 0 auto;
+    color: aliceblue;
+    font-size: 1.3rem;
+    border: 0;
+    border-radius: 5px;
+    background-color: rgb(128, 0, 126);
+    transition: .3s ease-in-out;
+    box-shadow: 3px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.send-review-button:hover {
+    margin-top: -3px;
+    margin-bottom: 3px;
+}
+
+.select-container {
+    display: inline-flex;
+    width: fit-content;
+    flex-direction: column;
+}
+
+.general {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#grade {
+    text-align: center;
+    width: 100%;
+}
+
+
+@media (max-width: 727px) {
+    .input-container {
+        margin-top: 10px;
+        width: 100%;
+    }
+    .impontant {
+        flex-direction: column;
+    }
+    .select-container {
+        width: 90%;
+        margin: 5px auto;
+    }
+}

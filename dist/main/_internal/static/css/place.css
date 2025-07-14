@@ -1,0 +1,232 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 95%;
+    margin: 50px auto;
+    padding: 0;
+}
+
+/* -------------------------------- инфа о местечке -------------------------- */
+
+.place-card {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    color: white;
+    border: 0;
+    border-radius: 1rem;
+    background-color: rgb(128, 0, 126);
+    box-shadow: 3px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.place-image {
+    width: 49%;
+    aspect-ratio: 16 / 11;
+    border-radius: 5%;
+    object-fit: cover;
+}
+
+.place-text {
+    width: 49%;
+}
+
+.tag {
+    height: 20px;
+    width: fit-content;
+    margin: 0;
+    padding: 0 10px;
+    text-align: center;
+    border-radius: 100px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(43, 177, 192, 0.571);
+}
+
+.place-name {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.place-address {
+    margin: 4px;
+}
+
+.description {
+    font-size: 1.1rem;
+}
+
+.review {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    /* padding: 1px 10px; */
+    width: 100px;
+    border-radius: 100%;
+}
+
+.review p {
+    color: azure;
+    font-size: 1.7rem;
+    margin: 0;
+    padding: 0;
+}
+
+.review img {
+    aspect-ratio: 1/1;
+    scale: 0.6;
+    margin: 0;
+    padding: 0;
+}
+
+.bad {
+    background-color: red;
+}
+
+.good {
+    background-color: rgb(16, 196, 16);
+}
+
+/* -------------------------- user-reviews ----------------------------- */
+
+.place-reviews {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.users-reviews {
+    margin-top: 100px;
+} 
+.user-review {
+    display: inline-flex;
+    flex-direction: row;
+    width: 47%;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 3px 1px 5px rgba(0, 0, 0, 0.5);
+}
+.user-grade {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    padding: 0 5px;
+    width: fit-content;
+    border-radius: 100%;
+}
+.user-grade img {
+    aspect-ratio: 1/1;
+    scale: 0.5;
+    margin: 0;
+    padding: 0;
+}
+.user-grade p {
+    padding: 0;
+    margin-left: 5px;
+    font-size: 1.1rem;
+    color: aliceblue;
+}
+
+/* -------------------------- new review ------------------------------ */
+
+h3 {
+    font-family: Cambria;
+    margin: 10px auto;
+}
+
+.review-form {
+    box-shadow: 3px 1px 5px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.write-review {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: first baseline;
+}
+
+.new_review_field {
+    display: flex;
+    flex-direction: column;
+}
+
+.new_grade {    
+    margin: 5px auto;
+    width: 100%;
+    height: fit-content;
+}
+
+#grade {
+    color: white;
+    padding: auto 10px;
+    border: 0;
+    border-radius: 5px;
+    background-color: rgb(128, 0, 116);
+    transition: .1s ease;
+    box-shadow: 3px 1px 5px rgba(0, 0, 0, 0.5);
+
+    height: 25px;
+}
+
+.new_about {    
+    margin: 5px auto;
+    width: 100%;
+    height: fit-content;
+}
+
+#place_description {
+    color: white;
+    padding: auto 10px;
+    border: 0;
+    border-radius: 5px;
+    background-color: rgb(128, 0, 116);
+    transition: .1s ease;
+    box-shadow: 3px 1px 5px rgba(0, 0, 0, 0.5);
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 50px;
+    max-height: 100px;
+}
+
+#submit {
+    color: white;
+    padding: auto 10px;
+    border: 0;
+    border-radius: 5px;
+    background-color: rgb(128, 0, 116);
+    transition: .1s ease;
+    box-shadow: 3px 1px 5px rgba(0, 0, 0, 0.5);
+    margin-top: 18px;
+    height: 30px;
+    width: 100px;
+}
+
+@media (max-width: 875px) {
+    .place-card {
+        flex-direction: column;
+    }
+    .place-image {
+        width: 100%;
+    }
+    .place-text {
+        width: 90%;
+        margin: 7px auto;
+    }
+    .write-review {
+        width: 90%;
+    }
+}
+
+@media (max-width: 540px) {
+    .user-review {
+        width: 100%;
+    } 
+}

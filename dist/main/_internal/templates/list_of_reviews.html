@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<main>
+    <div class="all-reviews">
+        {% for review in reviews %}
+            <a href="/place/{{ review.place_id }}">
+                <div class="review">
+                    <h2 class="place-name">{{ places_params[review.place_id]['name']}}</h2>
+                    <h4 class="place-address">{{ places_params[review.place_id]['address'] }}</h4>
+                    
+                    <div class="user-review-text">
+                        {% set color = 'good' %}
+                        {% if review.grade <= 2 %}
+                            {% set color = 'bad' %}
+                        {% endif %}
+                        <div class="review_data {{ color }}">
+                            <p>{{ review.grade }}</p>
+                            <img src="../static/icons/star.png" alt="star">
+                        </div>
+                        <p class="date">{{ dates[loop.index0] }}</p>
+                        {% if review.about|length > 100 %}
+                        <p class="description">{{ review.about[:100] }}...</p>
+                        {% else %}
+                        <p class="description">{{ review.about }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+</main>
+{% endblock %}
